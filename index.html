@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <form class="form" id="survey-form">
+
+            <div class="form__section">
+                <div class="form__heading">
+                    <img src="assets/conifer-235.png" alt="Illustration by Olha Khomich from Ouch!">
+                    <h1 class="form__title" id="title">Crear cuenta</h1>
+                    <p class="form__description" id="description">Unete a nuestra comunidad</p>
+                </div>
+
+                <div class="form__group user-info">
+                    <label for="name" class="form__label" id="name-label">Nombre</label>
+                    <input type="text" class="form__control" id="name" required placeholder="Ingrese su nombre">
+                    <label for="email" class="form__label" id="email-label">Correo</label>
+                    <input type="email" class="form__control" id="email" required placeholder="Ingrese su correo">
+                    <label for="number" class="form__label" id="number-label">Edad</label>
+                    <input type="number" class="form__control" id="number" min="18" max="99" placeholder="Ingrese su edad">
+                </div>
+            </div>
+
+            <div class="form__section">
+                <div class="form__group dropdown">
+                    <div class="form__dropdown">
+                        <p class="form__legend">¿Cual es tu cargo?</p>
+                        <select id="dropdown" class="form__control">
+                            <option value="frontend">Frontend</option>
+                            <option value="backend">Backend</option>
+                            <option value="mobile-dev">Mobile developer</option>
+                            <option value="game-dev">Game developer</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form__group radio-buttons">
+                    <p class="form__legend">¿Cual es tu nivel de desarrallador?</p>
+                    <input type="radio" name="user-level" value="junior" id="junior" checked class="form__radio">
+                    <label class="form__label-radio" for="junior">Junior</label>
+                    <input type="radio" name="user-level" value="semi-senior" id="semi-senior" class="form__radio">
+                    <label class="form__label-radio" for="semi-senior">Semi-senior</label>
+                    <input type="radio" name="user-level" value="Senior" id="senior" class="form__radio">
+                    <label class="form__label-radio" for="senior">Senior</label>
+                </div>
+
+                <div class="form__group checkbox">
+                    <p class="form__legend">¿Cuales son tus herramientas de desarrallado?</p>
+                    <input type="checkbox" id="html" class="form__checkbox" value="html">
+                    <label for="html" class="form__label-check">html</label>
+                    <input type="checkbox" id="css" class="form__checkbox" value="css">
+                    <label for="css" class="form__label-check">Css</label>
+                    <input type="checkbox" id="javascript" class="form__checkbox" value="Javascript">
+                    <label for="javascript" class="form__label-check">Javascript</label>
+                </div>
+
+                <div class="form__group textarea">
+                    <p class="form__legend">Hablanos sobre ti</p>
+                    <textarea class="form__control textarea"></textarea>
+                </div>
+
+                <div class="form__group">
+                    <button type="submit" id="submit" class="form__button">Enviar</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <script src="js/app.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --primary: #1F78F0;
+    --primary-hover: #1465D1;
+    --primary-active: #378AF9;
+    --first-color: #22183B;
+    --last-color: #615878;
+    --red-color: #EC2F2F;
+    --green-color: #2FEC54;
+}
+
+/* General Styles */
+body {
+    background: #fff;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Form Styles */
+.form {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 1.25em;
+}
+
+.form__heading {
+    text-align: center;
+}
+
+.form__heading img {
+    width: 50%;
+}
+
+.form__title {
+    color: var(--first-color);
+    margin: 2.5rem 0 0.625rem 0;
+}
+
+.form__description {
+    color: var(--last-color);
+    margin: 0 0 1.25rem 0;
+}
+
+.form__group.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__control {
+    padding: 12px 20px;
+    border: 1px solid rgba(97, 88, 120, 0.5);
+    border-radius: 5px;
+    color: var(--last-color);
+    font-weight: 600;
+    transition: .2s all ease;
+    font-size: 14px;
+}
+
+.form__control:focus {
+    border-color: var(--primary);
+}
+
+.form__control.error {
+    border-color: var(--red-color);
+}
+
+.form__group.user-info .form__control#name,
+.form__group.user-info .form__control#email {
+    margin-bottom: 20px;
+}
+
+.form__label, .form__legend {
+    font-size: 0.875em;
+    font-weight: 600;
+    color: var(--first-color);
+    margin-bottom: 0.625rem;
+}
+
+.form__group.dropdown {
+    margin-bottom: 40px;
+}
+
+.form__dropdown .form__control {
+    width: 100%;
+}
+
+.form__radio, .form__checkbox {
+    display: none;
+}
+
+.form__group.radio-buttons, .form__group.checkbox {
+    margin-bottom: 2.5em;
+}
+
+.form__label-radio, .form__label-check {
+    font-size: 0.875em;
+    font-weight: 600;
+    color: var(--last-color);
+    display: inline-block;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.form__radio:checked + .form__label-radio,
+.form__checkbox:checked + .form__label-check {
+    color: var(--primary);
+    background: rgba(31, 120, 240, 0.1);
+}
+
+.form__group.textarea {
+    margin-bottom: 40px;
+}
+
+textarea.form__control {
+    resize: none;
+    width: calc(100% - 40px);
+    height: 100px;
+}
+
+.form__button {
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: .2s all ease-out;
+}
+
+.form__button:hover {
+    background: var(--primary-hover);
+}
+
+
+.form__button:active {
+    background: var(--primary-active);
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 80%;
+    }
+}
